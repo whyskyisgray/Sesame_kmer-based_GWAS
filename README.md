@@ -5,7 +5,7 @@ Requirements
 ------------
 - Shell: zsh
 - Parallelization: GNU parallel
-- Container runtime: Singularity
+- Container: Singularity
 - Software:
   - KMC (via `KMC_count_kmer-imcrop4.zsh`, https://github.com/refresh-bio/KMC)
   - kmersGWAS (https://github.com/voichek/kmersGWAS)
