@@ -88,4 +88,22 @@ do
 done | parallel -j 4
 ```
 
+9. Blast on the genome
+```
+zsh kmer_blast_on_genome.zsh -i extracted_kmer.fasta -r reference_genome.fasta > mapped.pos
+```
 
+10. Make mapped.input file for plotting
+```
+python gwas_plotting_input_maker.py -input mapped.pos -config kmer_manhattan.config > mapped.input
+```
+
+11. Filter k-mers based on the sliding window
+```
+python $development/gwas/kmers_gwas_sliding_window_filtering.py -i mapped.input.input -w 31 -d 5 -lp 7 -o mapped.input.w31.d5.lp7.filter
+```
+
+12. Plotting
+```
+Rscript manhattan_plotting_v4.R mapped.input.w31.d5.lp7.filter output.pdf 0 15 reference_genome.fasta.fai
+```
