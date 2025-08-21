@@ -1,4 +1,4 @@
-# Sesame_kmer-based_GWAS workflow
+# Sesame kmer-based GWAS workflow
 
 
 Requirements
