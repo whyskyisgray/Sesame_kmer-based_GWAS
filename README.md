@@ -100,7 +100,7 @@ python gwas_plotting_input_maker.py -input mapped.pos -config kmer_manhattan.con
 
 11. Filter k-mers based on the sliding window
 ```
-python $development/gwas/kmers_gwas_sliding_window_filtering.py -i mapped.input.input -w 31 -d 5 -lp 7 -o mapped.input.w31.d5.lp7.filter
+python kmers_gwas_sliding_window_filtering.py -i mapped.input.input -w 31 -d 5 -lp 7 -o mapped.input.w31.d5.lp7.filter
 ```
 
 12. Plotting
